@@ -13,8 +13,6 @@ public class Collatz {
                 if (mood.equals("v")) { 
                     sequenceOutput.append(current).append(" ");
                 }
-                
-                // חישוב הצעד הבא
                 if (current % 2 == 0) {
                     current = current / 2;
                 } else {
