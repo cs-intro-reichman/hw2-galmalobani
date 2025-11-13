@@ -7,7 +7,7 @@ public class Collatz {
         String mood = args[1];
         for (int i = 1; i <= n; i++) {
             int newnum = i;
-            int count = i;
+            int count = 1;
             if (mood.equals("v")) { 
                     System.out.println(i +"v");
                 }
@@ -20,7 +20,7 @@ public class Collatz {
                 
                 count++;
                 if (mood.equals("v")) { 
-                    System.out.println(newnum +"v");
+                    System.out.println(newnum +" ");
                 }
                 
             }
