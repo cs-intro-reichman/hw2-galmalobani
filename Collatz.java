@@ -12,16 +12,16 @@ public class Collatz {
                     System.out.println(i +"v");
                 }
             while (newnum != 1) {
-                if (mood.equals("v")) { 
-                    System.out.println(newnum +"v");
-                }
                 if (newnum % 2 == 0) {
-                    count = count / 2;
+                    newnum = newnum /2;
                 } else {
                     newnum = (newnum * 3) + 1;
                 }
                 
                 count++;
+                if (mood.equals("v")) { 
+                    System.out.println(newnum +"v");
+                }
                 
             }
             if (i==1) {
