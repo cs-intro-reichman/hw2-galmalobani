@@ -25,6 +25,12 @@ public class Collatz {
                 sequenceOutput.append(1); 
                 System.out.println(seed + " " + sequenceOutput.toString().trim() + " (" + steps + ")");
             }
+            if(seed==1){
+                if(mood.equals("v")){
+                    System.out.println("4 2 1");
+                }
+                steps ++;
+            }
         }
         System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
     }
