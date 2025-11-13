@@ -3,35 +3,36 @@ public class Collatz {
     
     public static void main(String[] args) {
         
-        int N = Integer.parseInt(args[0]);
+        int n = Integer.parseInt(args[0]);
         String mood = args[1];
-        for (int seed = 1; seed <= N; seed++) {
-            long current = seed;
-            int steps = 0;
-            StringBuilder sequenceOutput = new StringBuilder();
-            while (current != 1) {
-                if (mood.equals("v")) { 
-                    sequenceOutput.append(current).append(" ");
+        for (int i = 1; i <= n; i++) {
+            int newnum = i;
+            int count = i;
+            if (mood.equals("v")) { 
+                    System.out.println(i +"v");
                 }
-                if (current % 2 == 0) {
-                    current = current / 2;
+            while (newnum != 1) {
+                if (newnum % 2 == 0) {
+                    count = count / 2;
                 } else {
-                    current = (current * 3) + 1;
+                    newnum = (newnum * 3) + 1;
                 }
                 
-                steps++;
+                count++;
+                if (mood.equals("v")) { 
+                    System.out.println(newnum +"v");
+                }
             }
-            if (mood.equals("v")) {
-                sequenceOutput.append(1); 
-                System.out.println(seed + " " + sequenceOutput.toString().trim() + " (" + steps + ")");
-            }
-            if(seed==1){
+            if (i==1) {
                 if(mood.equals("v")){
                     System.out.println("4 2 1");
                 }
-                steps ++;
+                count = 4;
+            }
+            if(mood.equals("v")){
+                System.out.println("(" + count + ")");
             }
         }
-        System.out.println("Every one of the first " + N + " hailstone sequences reached 1.");
+        System.out.println("Every one of the first " + n + " hailstone sequences reached 1.");
     }
 }
