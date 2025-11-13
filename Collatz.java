@@ -9,7 +9,7 @@ public class Collatz {
             int newnum = i;
             int count = 1;
             if (mood.equals("v")) { 
-                    System.out.println(i +"v");
+                    System.out.print(i +"v");
                 }
             while (newnum != 1) {
                 if (newnum % 2 == 0) {
@@ -20,18 +20,18 @@ public class Collatz {
                 
                 count++;
                 if (mood.equals("v")) { 
-                    System.out.println(newnum +" ");
+                    System.out.print(newnum +" ");
                 }
                 
             }
             if (i==1) {
                 if(mood.equals("v")){
-                    System.out.println("4 2 1");
+                    System.out.print("4 2 1");
                 }
                 count = 4;
             }
             if(mood.equals("v")){
-                System.out.println("(" + count + ")");
+                System.out.print("(" + count + ")");
             }
         }
         System.out.println("Every one of the first " + n + " hailstone sequences reached 1.");
