@@ -1,4 +1,3 @@
-// Demonstrates the Collatz conjecture.
 public class Collatz {
     public static void main(String[] args) {
 
@@ -6,6 +5,14 @@ public class Collatz {
         String mood = args[1];
 
         for (int i = 1; i <= n; i++) {
+
+            if (i == 1) {
+                if (mood.equals("v")) {
+                    System.out.println("1 4 2 1 (4)");
+                }
+                continue;
+            }
+
             int newnum = i;
             int count = 1;
 
@@ -19,9 +26,7 @@ public class Collatz {
                 } else {
                     newnum = newnum * 3 + 1;
                 }
-
                 count++;
-
                 if (mood.equals("v")) {
                     System.out.print(newnum + " ");
                 }
